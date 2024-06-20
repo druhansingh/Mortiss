@@ -37,3 +37,19 @@ return next (new ErrorHandler("Please provide all details! ",400))
     }
     generateToken(user,"User Logged in successfully! ",200,res);
 })
+
+export const addNewAdmin=catchAsyncErrors(async(req,res,next)=>{
+    const {firstName,lastName,email,phone,password,gender,dob,nic}=req.body;
+    if(!firstName||!lastName||!email||!phone||!password||!gender||!dob||!nic){
+        return next(new ErrorHandler("Please fill full form! ",400));
+    }
+    const isRegistered=await User.findOne({email});
+        if(isRegistered){
+            return next(new ErrorHandler(`${isRegistered.role} with this email already exists!`))
+        }
+        const admin=await User.create({firstName,lastName,email,phone,password,gender,dob,nic,role:"Admin"});
+        res.status(200).json({
+            success:true,
+            message:"New admin registered!"
+        })
+}); 
