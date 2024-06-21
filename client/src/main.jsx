@@ -12,7 +12,7 @@ return(
   <Context.Provider value={{isAuthenticated,setIsAuthenticated,user,setUser}}>
  <App />
   </Context.Provider>
-)
+);
 
 };
 
@@ -20,4 +20,4 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
    <AppWrapper/>
   </React.StrictMode>,
-)
+);

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext, useEffect } from "react";
 import "./App.css"
 import {BrowserRouter as Router,Routes,Route} from "react-router-dom"
 import Home from "./pages/Home"
@@ -7,7 +7,8 @@ import AboutUs from "./pages/AboutUs"
 import Register from "./pages/Register"
 import Login from "./pages/Login"
 import { ToastContainer} from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import "react-toastify/dist/ReactToastify.css";
+import axios from "axios";
 
 const App = () => {
   return (
