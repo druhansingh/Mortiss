@@ -1,9 +1,14 @@
 import React from 'react'
+import AppointmentForm from '../components/AppointmentForm'
+import Hero from '../components/Hero'
 
-const appointment = () => {
+const Appointment = () => {
   return (
-    <div></div>
+    <>
+    <Hero title={"Schedule your Appointment"} imageUrl={"/signin.png"} />
+    <AppointmentForm/>
+    </>
   )
 }
 
-export default appointment
+export default Appointment
