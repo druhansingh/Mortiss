@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import {Faphone,FaLocationArrow} from "react-icons/fa"
+import { FaPhone, FaLocationArrow } from "react-icons/fa";
 import {MdEmail} from "react-icons/md"
 
 
@@ -70,7 +70,7 @@ const Footer = () => {
         <div>
             <h4>Contact</h4>
             <div>
-                <Faphone/>
+                <FaPhone/>
                 <span>999-999-999</span>
             </div>
             <div>
